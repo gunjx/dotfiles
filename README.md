@@ -3,7 +3,7 @@
 ## Installation
 
 ``` sh
-FRESH_LOCAL_SOURCE=squidfunk/dotfiles bash -c "`curl -sL get.freshshell.com`"
+FRESH_LOCAL_SOURCE=gunjx/dotfiles bash -c "`curl -sL get.freshshell.com`"
 chsh -s /bin/zsh
 ```
 
