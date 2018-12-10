@@ -19,7 +19,7 @@
 # IN THE SOFTWARE.
 
 # Initialize nvm
-if [ -d "$HOME/.rbenv" ]; then
-  export PATH=$HOME/.rbenv/bin:$PATH
-  eval "$(rbenv init -)"
+if [ -d "$HOME/.rvm" ]; then
+  export PATH="$HOME/.rvm/bin:$PATH"
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 fi

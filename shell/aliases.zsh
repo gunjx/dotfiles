@@ -67,3 +67,7 @@ alias docker-purge=" \
 # Merge PDF files: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias pdf-merge="/System/Library/Automator/\
 Combine\ PDF\ Pages.action/Contents/Resources/join.py"
+
+alias phpliteadmin="docker run -it --rm -p 2015:2015 -v `pwd`:/db acttaiwan/phpliteadmin"
+
+alias chrome="open -a 'Google Chrome'"
