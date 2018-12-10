@@ -1,4 +1,4 @@
-# Copyright (c) 2017 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2018 Andreas Spannagel <spannagel.andreas@gmail.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -34,7 +34,6 @@ fresh shell/aliases.zsh
 fresh shell/bindings.zsh
 fresh shell/completion.zsh
 fresh shell/env.zsh
-fresh shell/go.zsh
 fresh shell/history.zsh
 fresh shell/node.zsh
 fresh shell/path.zsh

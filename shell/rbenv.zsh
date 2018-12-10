@@ -18,13 +18,8 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Initialize nvm
-if [ -d "$HOME/.nvm" ]; then
-  export NVM_DIR=$HOME/.nvm
-  source $NVM_DIR/nvm.sh
-fi
-
-# Initialize avn, automatic version switcher
-if [ -d "$HOME/.avn" ]; then
-  source $HOME/.avn/bin/avn.sh
+# Initialize rbenv
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH=$HOME/.rbenv/bin:$PATH
+  eval "$(rbenv init -)"
 fi

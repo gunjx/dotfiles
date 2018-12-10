@@ -1,4 +1,4 @@
-# Copyright (c) 2017 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2018 Andreas Spannagel <spannagel.andreas@gmail.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -31,7 +31,7 @@ alias notify="tput bel"
 
 # Intuitive map function, for example, to list all directories that contain a
 # certain file: find . -name .gitattributes | map dirname
-alias map="xargs -n1"
+# alias map="xargs -n1"
 
 # Lock the screen
 alias afk="$HOME/.dotfiles/bin/afk"
@@ -67,7 +67,3 @@ alias docker-purge=" \
 # Merge PDF files: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias pdf-merge="/System/Library/Automator/\
 Combine\ PDF\ Pages.action/Contents/Resources/join.py"
-
-alias phpliteadmin="docker run -it --rm -p 2015:2015 -v `pwd`:/db acttaiwan/phpliteadmin"
-
-alias chrome="open -a 'Google Chrome'"

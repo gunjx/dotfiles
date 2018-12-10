@@ -1,4 +1,4 @@
-# Copyright (c) 2017 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2018 Andreas Spannagel <spannagel.andreas@gmail.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -19,7 +19,7 @@
 # IN THE SOFTWARE.
 
 # Common environment variables
-export EDITOR="vim"
+export EDITOR="nano"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HIST_STAMPS="dd.mm.yy"
 export CLICOLOR=1
