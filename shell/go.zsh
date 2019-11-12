@@ -1,4 +1,4 @@
-# Copyright (c) 2017 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2018 Andreas Spannagel <spannagel.andreas@gmail.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -18,5 +18,7 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Export workspace for go
-export GOPATH=$HOME/.go
+if [[ -o login ]]; then
+  # Export workspace for go
+  export GOPATH=$HOME/.go
+fi

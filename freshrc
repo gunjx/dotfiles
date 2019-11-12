@@ -38,4 +38,4 @@ fresh shell/history.zsh
 fresh shell/node.zsh
 fresh shell/path.zsh
 fresh shell/prompt.zsh
-fresh shell/rvm.zsh
+fresh shell/python.zsh

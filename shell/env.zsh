@@ -21,7 +21,7 @@
 # Common environment variables
 export EDITOR="nano"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export HIST_STAMPS="dd.mm.yy"
+export HIST_STAMPS="yyyy-mm-dd"
 export CLICOLOR=1
 
 # Cache for zsh

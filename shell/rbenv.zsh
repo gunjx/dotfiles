@@ -18,8 +18,10 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Initialize rbenv
-if [ -d "$HOME/.rbenv" ]; then
-  export PATH=$HOME/.rbenv/bin:$PATH
-  eval "$(rbenv init -)"
+if [[ -o login ]]; then
+  # Initialize rbenv
+  if [ -d "$HOME/.rbenv" ]; then
+    export PATH=$HOME/.rbenv/bin:$PATH
+    eval "$(rbenv init -)"
+  fi
 fi

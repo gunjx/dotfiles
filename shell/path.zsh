@@ -18,19 +18,21 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Homebrew
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
+if [[ -o login ]]; then
+  # Homebrew
+  export PATH="/usr/local/bin:$PATH"
+  export PATH="/usr/local/sbin:$PATH"
 
-# NPM
-export PATH="$PATH:`npm bin -g`"
+  # NPM
+  export PATH="$PATH:`npm bin -g`"
 
-# Golang
-export PATH="$PATH:$HOME/go/bin"
+  # Golang
+  export PATH="$PATH:$HOME/go/bin"
 
-# Python
-if [ -d "$HOME/Library/Python/3.7/bin" ]; then
-  export PATH="$PATH:$HOME/Library/Python/3.7/bin"
+  # Python
+  if [ -d "$HOME/Library/Python/3.7/bin" ]; then
+    export PATH="$PATH:$HOME/Library/Python/3.7/bin"
+  fi
+  export LC_ALL=en_US.UTF-8
+  # export LANG=en_US.UTF-8
 fi
-export LC_ALL=en_US.UTF-8
-# export LANG=en_US.UTF-8

@@ -18,30 +18,25 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# History configuration
-if [ -z "$HISTFILE" ]; then
-  HISTFILE=$HOME/.zsh_history
+if [[ -o login ]]; then
+  # Initialize pyenv
+  if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+  fi
+
+  # Initialize poetry
+  export PATH="$HOME/.poetry/bin:$PATH"
+
+  # pip should only run if there is a virtualenv currently activated
+  export PIP_REQUIRE_VIRTUALENV=true
+
+  # Commands to override pip restriction above.
+  # Use `gpip` or `gpip3` to force installation of a package in the global
+  # python environment.
+  gpip(){
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+  }
+  gpip3(){
+    PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
+  }
 fi
-
-# Size of history
-HISTSIZE=10000
-SAVEHIST=10000
-
-# Show history
-case $HIST_STAMPS in
-  "mm/dd/yyyy") alias history='fc -fl 1' ;;
-  "dd.mm.yyyy") alias history='fc -El 1' ;;
-  "yyyy-mm-dd") alias history='fc -il 1' ;;
-  *) alias history='fc -il 1' ;;
-esac
-
-# Configuration
-setopt append_history
-setopt extended_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-setopt hist_ignore_space
-setopt hist_verify
-setopt inc_append_history
-setopt share_history
-setopt interactivecomments
