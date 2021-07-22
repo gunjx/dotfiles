@@ -18,7 +18,7 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Initialize nvm
+# Initialize rvm
 if [ -d "$HOME/.rvm" ]; then
   export PATH="$HOME/.rvm/bin:$PATH"
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
