@@ -33,6 +33,11 @@ if [[ -o login ]]; then
   # if [ -d "$HOME/Library/Python/3.7/bin" ]; then
   #   export PATH="$PATH:$HOME/Library/Python/3.7/bin"
   # fi
+
+  # indy-sdk libindy
+  # export DYLD_LIBRARY_PATH=/Users/andreasspannagel/perfectid/ssi/indy-sdk/libindy/target/debug
+  # export LD_LIBRARY_PATH=/Users/andreasspannagel/perfectid/ssi/indy-sdk/libindy/target/debug
+
   export LC_ALL=en_US.UTF-8
   # export LANG=en_US.UTF-8
 fi
