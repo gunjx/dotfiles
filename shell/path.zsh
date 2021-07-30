@@ -24,15 +24,15 @@ if [[ -o login ]]; then
   export PATH="/usr/local/sbin:$PATH"
 
   # NPM
-  export PATH="$PATH:`npm bin -g`"
+  # export PATH="$PATH:`npm bin -g`"
 
   # Golang
-  export PATH="$PATH:$HOME/go/bin"
+  # export PATH="$PATH:$HOME/go/bin"
 
   # Python
-  if [ -d "$HOME/Library/Python/3.7/bin" ]; then
-    export PATH="$PATH:$HOME/Library/Python/3.7/bin"
-  fi
+  # if [ -d "$HOME/Library/Python/3.7/bin" ]; then
+  #   export PATH="$PATH:$HOME/Library/Python/3.7/bin"
+  # fi
   export LC_ALL=en_US.UTF-8
   # export LANG=en_US.UTF-8
 fi

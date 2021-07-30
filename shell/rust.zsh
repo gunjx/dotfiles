@@ -18,27 +18,7 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Update fresh and setup shell
-fresh freshshell/fresh bin/fresh --bin
-fresh zshrc --file=$HOME/.zshrc
-
-# Install zsh extensions
-fresh olivierverdier/zsh-git-prompt . --file=zsh-git-prompt/
-fresh zsh-users/zsh-autosuggestions . --file=zsh-autosuggestions/
-fresh zsh-users/zsh-completions . --file=zsh-completions/
-fresh zsh-users/zsh-history-substring-search . \
-  --file=zsh-history-substring-search/
-
-# Load modules
-fresh shell/aliases.zsh
-fresh shell/bindings.zsh
-fresh shell/completion.zsh
-fresh shell/env.zsh
-# fresh shell/go.zsh
-fresh shell/history.zsh
-fresh shell/node.zsh
-fresh shell/path.zsh
-fresh shell/prompt.zsh
-# fresh shell/rbenv.zsh
-fresh shell/python.zsh
-fresh shell/rust.zsh
+# Initialize rust cargo
+if [ -d "$HOME/.cargo" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
