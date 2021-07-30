@@ -19,10 +19,8 @@
 # IN THE SOFTWARE.
 
 # Initialize nvm
-if [ -d "$HOME/.nvm" ]; then
-  export NVM_DIR=$HOME/.nvm
-  source $NVM_DIR/nvm.sh
-fi
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # Initialize avn, automatic version switcher
 if [ -d "$HOME/.avn" ]; then

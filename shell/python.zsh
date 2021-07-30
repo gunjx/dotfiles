@@ -29,7 +29,7 @@ if [[ -o login ]]; then
   fi
 
   # Initialize poetry
-  export PATH="$HOME//.local/bin:$PATH"
+  export PATH="$HOME/.local/bin:$PATH"
 
   # pip should only run if there is a virtualenv currently activated
   export PIP_REQUIRE_VIRTUALENV=true
