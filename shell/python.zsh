@@ -30,7 +30,7 @@ if [[ -o login ]]; then
 
   # Initialize poetry
   export PATH="$HOME/.local/bin:$PATH"
-  export PATH="$HOME/.poetry/env:$PATH"
+  export PATH="$HOME/.poetry/bin:$PATH"
 
   # pip should only run if there is a virtualenv currently activated
   export PIP_REQUIRE_VIRTUALENV=true
