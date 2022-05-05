@@ -20,8 +20,19 @@
 
 if [[ -o login ]]; then
   # Homebrew
-  export PATH="/usr/local/bin:$PATH"
-  export PATH="/usr/local/sbin:$PATH"
+  if [ "$(uname -m)" = "arm64" ]; then
+    # Use arm64 brew, with fallback to x86 brew
+    if [ -f /opt/homebrew/bin/brew ]; then
+      export PATH="/usr/local/bin${PATH+:$PATH}";
+      eval $(/opt/homebrew/bin/brew shellenv)
+    fi
+  else
+    # Use x86 brew, with fallback to arm64 brew
+    if [ -f /usr/local/bin/brew ]; then
+      export PATH="/opt/homebrew/bin${PATH+:$PATH}";
+      eval $(/usr/local/bin/brew shellenv)
+    fi
+  fi
 
   # NPM
   # export PATH="$PATH:`npm bin -g`"
