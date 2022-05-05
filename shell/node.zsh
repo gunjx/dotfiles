@@ -18,11 +18,5 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Initialize nvm
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-# Initialize avn, automatic version switcher
-if [ -d "$HOME/.avn" ]; then
-  source $HOME/.avn/bin/avn.sh
-fi
+# Initialize asdf
+[ -s "/$(brew --prefix asdf)/libexec/asdf.sh" ] && . $(brew --prefix asdf)/libexec/asdf.sh
