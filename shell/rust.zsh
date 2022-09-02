@@ -20,5 +20,5 @@
 
 # Initialize rust cargo
 if [ -d "$HOME/.cargo" ]; then
-  export PATH="$HOME/.cargo/bin:$PATH"
+  export PATH="$HOME/.cargo/env:$PATH"
 fi
