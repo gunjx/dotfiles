@@ -25,16 +25,9 @@ alias ...="cd ../.."
 alias ....="cd ../../../"
 alias .....="cd ../../../../"
 
-# Ring the terminal bell and put a badge on Terminal.app’s Dock icon, which is
-# useful when executing time-consuming commands)
-alias notify="tput bel"
-
 # Intuitive map function, for example, to list all directories that contain a
 # certain file: find . -name .gitattributes | map dirname
-# alias map="xargs -n1"
-
-# Lock the screen
-alias afk="$HOME/.dotfiles/bin/afk"
+alias map="xargs -n1"
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
@@ -54,16 +47,13 @@ alias desktop-show="defaults write com.apple.finder CreateDesktop \
   -bool true && killall Finder"
 
 # Docker cleanup
-alias docker-stop-all="docker rm -f $(docker ps -q -a | tr '\n' ' ')"
-alias docker-remove-dangling=" \
-  docker rmi -f $(docker images -q -f dangling=true | tr '\n' ' ')"
-alias docker-remove-all="docker rmi -f $(docker images -q)"
-alias docker-purge=" \
-  docker-stop-all && \
-  docker-remove-all && \
-  docker rm `docker ps -aq --no-trunc --filter 'status=exited'` && \
-  docker rmi `docker images --filter 'dangling=true' -q --no-trunc`"
+# alias docker-stop-all="docker rm -f $(docker ps -q -a | tr '\n' ' ')"
+# alias docker-remove-dangling=" \
+#   docker rmi -f $(docker images -q -f dangling=true | tr '\n' ' ')"
+# alias docker-remove-all="docker rmi -f $(docker images -q)"
+# alias docker-purge=" \
+#   docker-stop-all && \
+#   docker-remove-all && \
+#   docker rm `docker ps -aq --no-trunc --filter 'status=exited'` && \
+#   docker rmi `docker images --filter 'dangling=true' -q --no-trunc`"
 
-# Merge PDF files: `mergepdf -o output.pdf input{1,2,3}.pdf`
-alias pdf-merge="/System/Library/Automator/\
-Combine\ PDF\ Pages.action/Contents/Resources/join.py"
