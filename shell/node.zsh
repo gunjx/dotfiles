@@ -19,4 +19,5 @@
 # IN THE SOFTWARE.
 
 # Initialize asdf
-[ -s "/$(brew --prefix asdf)/libexec/asdf.sh" ] && . $(brew --prefix asdf)/libexec/asdf.sh
+# [ -s "/$(brew --prefix asdf)/libexec/asdf.sh" ] && . $(brew --prefix 
+asdf)/libexec/asdf.sh
