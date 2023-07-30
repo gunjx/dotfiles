@@ -20,4 +20,4 @@
 
 # Initialize asdf
 # [ -s "/$(brew --prefix asdf)/libexec/asdf.sh" ] && . $(brew --prefix 
-asdf)/libexec/asdf.sh
+# asdf)/libexec/asdf.sh
